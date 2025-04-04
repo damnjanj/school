@@ -1,0 +1,44 @@
+services:
+    db:
+        image: mysql:8.0.41
+        container_name: school-mysql_container
+        command: --default-authentication-plugin=mysql_native_password
+        volumes:
+            - ./db_app:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root123
+            MYSQL_DATABASE: school
+            MYSQL_USER: school-user
+            MYSQL_PASSWORD: school123
+            MYSQL_ROOT_HOST: '%'
+        ports:
+            - 3306:3306
+        networks:
+            - school
+    php:
+        build:
+            context: .
+            target: php_dev
+            dockerfile: docker/php/Dockerfile
+            args:
+                TIMEZONE: Europe/Berlin
+        container_name: school-php_container
+        volumes:
+            - ../school/:/var/www/school/
+        networks:
+            - school
+
+    nginx:
+        build:
+            context: .
+            dockerfile: docker/nginx/Dockerfile
+        container_name: school-nginx_container
+        volumes:
+            - ../school/:/var/www/school/
+        ports:
+            - 8080:80
+        networks:
+            - school
+
+networks:
+  school:
