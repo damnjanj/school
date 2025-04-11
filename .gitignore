@@ -1,2 +1,8 @@
 /db_app/*
 .idea
+/public/intro/example.txt
+/public/class01/example.txt
+/public/class02/example.txt
+/public/class03/example.txt
+/public/class04/example.txt
+/public/class05/example.txt

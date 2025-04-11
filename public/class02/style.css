@@ -1,0 +1,76 @@
+.open-sans-google {
+    font-family: "Open Sans Google", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
+    font-family: "Open Sans Google", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 150px;
+    background: black;
+    color: #fff;
+    font-size: 42px;
+    align-content: center;
+    text-align: center;
+}
+
+.content {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.center {
+    margin: 50px;
+    background-color: white;
+    padding: 40px;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+    border-color: lightgray;
+    border-style: solid;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+input[type="file"] {
+    background-color: #a9a9a9;
+    padding: 10px;
+    width: 50%;
+    display: block;
+    margin-bottom: 16px;
+    border: none;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    min-width: 150px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer {
+    height: 100px;
+    background-color: #777;
+    text-align: center;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    top: 100%;
+    margin-top: -100px;
+    color: #fff;
+    font-size: 18px;
+}
